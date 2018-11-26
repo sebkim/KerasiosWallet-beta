@@ -1,0 +1,26 @@
+{
+  "name": "krstoken",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bn.js": "^4.11.8",
+    "commander": "^2.19.0",
+    "firebase-admin": "^6.1.0",
+    "fs-extra": "^7.0.0",
+    "moment": "^2.22.2",
+    "slack-node": "^0.1.8",
+    "solc": "^0.4.25",
+    "truffle-contract": "^3.0.6",
+    "truffle-hdwallet-provider": "0.0.6",
+    "web3": "^1.0.0-beta.36"
+  }
+}
