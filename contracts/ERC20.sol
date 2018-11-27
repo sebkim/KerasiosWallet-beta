@@ -2,6 +2,7 @@ pragma solidity ^0.4.24;
 
 import "./IERC20.sol";
 import "./SafeMath.sol";
+import "./AddressMapper.sol";
 
 /**
  * @title Standard ERC20 token
@@ -13,11 +14,17 @@ import "./SafeMath.sol";
 contract ERC20 is IERC20 {
   using SafeMath for uint256;
 
-  mapping (address => uint256) private _balances;
+  mapping (address => uint256) internal _balances;
 
-  mapping (address => mapping (address => uint256)) private _allowed;
+  mapping (address => mapping (address => uint256)) internal _allowed;
 
   uint256 private _totalSupply;
+
+  AddressMapper public addressMapper;
+
+  constructor(address addressMapperAddr) public {
+    addressMapper = AddressMapper(addressMapperAddr);
+  }
 
   /**
   * @dev Total number of tokens in existence
