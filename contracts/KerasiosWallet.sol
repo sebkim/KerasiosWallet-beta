@@ -19,8 +19,10 @@ contract KerasiosWallet is MasterRole {
         public
         payable
     {
+        require(addressMapper.isAddressSet(msg.sender));
         if (msg.value > 0)
-            Deposit(msg.sender, msg.value);
+            emit Deposit(msg.sender, msg.value);
+
     }
 
     function submitTransaction(address destination, uint value, bytes data)
@@ -28,6 +30,8 @@ contract KerasiosWallet is MasterRole {
         onlyMaster
     {
         external_call(destination, value, data.length, data);
+        if(value > 0)
+            emit Withdraw(destination, value);
     }
 
     function external_call(address destination, uint value, uint dataLength, bytes data) private returns (bool) {

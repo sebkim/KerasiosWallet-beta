@@ -27,7 +27,7 @@ const deployERC20 = (addressMapperAddr, cap, name, symbol, decimals) => {
 }
 
 contract('AddressMapper Test', function(accounts) {
-    console.log(accounts)
+    // console.log(accounts)
     let ins;
     let erc20;
     let globalBoolPrint = false
@@ -111,8 +111,8 @@ contract('AddressMapper Test', function(accounts) {
             console.log('-----')
             console.log(`rawData: ${hdata}`)
             console.log(`data: ${toAsciiData}`)
-            console.log(`beforeBalance: ${beforeBalance}`)
-            console.log(`afterBalance: ${afterBalance}`)
+            // console.log(`beforeBalance: ${beforeBalance}`)
+            // console.log(`afterBalance: ${afterBalance}`)
             console.log('-----')
         }
 
