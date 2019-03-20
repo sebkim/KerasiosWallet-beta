@@ -101,8 +101,8 @@ program
   .action(async (options) => {
     // constructor parameters
     const cap = '1000000000000000000000000000'
-    const name = 'Kerasios Test 5'
-    const symbol = 'KRSTest5'
+    const name = 'Kerasios'
+    const symbol = 'KRS'
     const decimals = '18'
     ///
     const gasPrice = options.gas;
